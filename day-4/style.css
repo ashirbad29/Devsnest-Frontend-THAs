@@ -72,6 +72,7 @@ body {
 	transform: rotate(160deg);
 }
 
+/* Center Dot */
 .dot {
 	position: absolute;
 	height: 20px;
