@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	height: fit-content;
+	width: 400px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.pixel:hover {
+	background-color: blue;
+}
