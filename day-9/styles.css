@@ -1,0 +1,49 @@
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.screen {
+	width: 450px;
+	height: 25px;
+	background-color: #007fff;
+	border-radius: 20px 20px 0 0;
+	position: absolute;
+	top: 0;
+}
+
+#seat-container {
+	width: 90%;
+	height: 82vh;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	background-color: #7cb9e8;
+	grid-gap: 5px;
+	padding: 8px;
+}
+
+.info {
+	display: flex;
+	width: 400px;
+	justify-content: space-between;
+}
+
+.info > h1 {
+	font-size: 1.3rem;
+}
+
+.available {
+	background-color: #7fffd4;
+}
+
+.booked:hover,
+.available:hover {
+	opacity: 0.6;
+}
+
+.booked {
+	background-color: #007fff;
+}
