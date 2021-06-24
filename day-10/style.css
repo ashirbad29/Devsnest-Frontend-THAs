@@ -1,0 +1,61 @@
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	min-height: 80vh;
+	min-width: 60%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 3px;
+	padding: 2px;
+	perspective: 2500px;
+}
+
+.card {
+	background-color: aqua;
+	/* background-image: url('./assets/naruto-face.png');
+	background-repeat: no-repeat;
+	background-position: center; */
+	position: relative;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+.card-front {
+	z-index: 1;
+	background-color: pink;
+}
+
+.card-back {
+	background-color: brown;
+	transform: rotateY(180deg);
+}
+/* 
+.card:hover {
+	transform: rotateY(180deg);
+} */
+
+.show {
+	transform: rotateY(180deg);
+}
+
+.img {
+	height: 100%;
+	width: 100%;
+}
+
+.hide {
+	visibility: hidden;
+}
