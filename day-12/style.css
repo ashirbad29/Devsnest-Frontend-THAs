@@ -1,0 +1,134 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(
+		90deg,
+		rgba(48, 16, 255, 1) 0%,
+		rgba(100, 115, 255, 1) 100%
+	);
+	color: white;
+}
+
+.todo-app {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 520px;
+	min-height: 500px;
+	background: #161a2b;
+	text-align: center;
+	margin: 50px auto;
+	border-radius: 10px;
+}
+
+h1 {
+	margin: 32px 0;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.todo-input {
+	padding: 14px 32px 14px 16px;
+	border-radius: 4px 0 0 4px;
+	border: 2px solid #5d0cff;
+	outline: none;
+	width: 320px;
+	background: transparent;
+	color: #fff;
+}
+
+.todo-input::placeholder {
+	color: #e2e2e2;
+}
+
+.todo-btn {
+	padding: 16px;
+	border: none;
+	margin-left: -4px;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+	outline: none;
+	background: linear-gradient(
+		90deg,
+		rgba(93, 12, 255, 1) 0%,
+		rgba(155, 0, 250, 1) 100%
+	);
+
+	color: #fff;
+	text-transform: capitalize;
+}
+
+.todo-container {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	align-items: center;
+	padding: 20px;
+}
+
+.todo-item {
+	width: 90%;
+	display: flex;
+	margin-bottom: 20px;
+	padding: 15px;
+	justify-content: space-between;
+	border-radius: 5px;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 118, 20, 1) 0%,
+		rgba(255, 84, 17, 1) 100%
+	);
+}
+
+.todo-item > span {
+	cursor: pointer;
+}
+
+.todo-item:nth-child(4n + 1) {
+	background: linear-gradient(
+		90deg,
+		rgba(93, 12, 255, 1) 0%,
+		rgba(155, 0, 250, 1) 100%
+	);
+}
+
+.todo-item:nth-child(4n + 2) {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 12, 241, 1) 0%,
+		rgba(250, 0, 135, 1) 100%
+	);
+}
+
+.todo-item:nth-child(4n + 3) {
+	background: linear-gradient(
+		90deg,
+		rgba(20, 159, 255, 1) 0%,
+		rgba(17, 122, 255, 1) 100%
+	);
+}
+
+.done {
+	background: lightslategray !important;
+}
+
+.done > p {
+	text-decoration: line-through;
+}
+
+.mark-btn,
+.delete-btn {
+	cursor: pointer;
+}
+
+.delete-btn {
+	margin-left: 10px;
+}
