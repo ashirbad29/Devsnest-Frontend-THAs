@@ -1,0 +1,33 @@
+.card {
+	padding: 20px;
+	border: 0.5px solid #bbb;
+	border-radius: 3px;
+}
+
+.input-controls > input {
+	padding: 3px 4px;
+	margin-bottom: 15px;
+}
+
+.controls {
+	margin-top: 8px;
+}
+
+.controls > button,
+.btn {
+	margin-right: 12px;
+	font-size: 1rem;
+	padding: 3px 7px;
+	border: none;
+	cursor: pointer;
+}
+
+.bg-red {
+	background-color: #e21717;
+	color: whitesmoke;
+}
+
+.bg-green {
+	background-color: #6ec72d;
+	color: whitesmoke;
+}

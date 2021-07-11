@@ -1,0 +1,58 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input-container {
+	/* width: 100%; */
+	max-width: 800px;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.input-container > button {
+	margin-top: 20px;
+	width: 100%;
+	border: none;
+	background-color: antiquewhite;
+	cursor: pointer;
+}
+
+.input-field-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-field-container > input {
+	border: 1px solid grey;
+	border-radius: 3px;
+	outline: none;
+	padding: 8px;
+	font-size: 1.1rem;
+	/* width: 47%; */
+}
+
+button {
+	font-size: calc(10px + 2vmin);
+	padding: 3px;
+}
+
+/* Utils */
+.mr-20 {
+	margin-right: 20px !important;
+}
+
+input:focus {
+	border: 2px solid lightblue;
+}
+
+input:invalid {
+	padding: 2px solid red;
+}
