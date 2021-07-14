@@ -1,6 +1,11 @@
 .App {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.meme__container {
 	padding: 30px;
-	text-align: center;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
