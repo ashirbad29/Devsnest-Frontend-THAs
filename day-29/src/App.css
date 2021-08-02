@@ -62,3 +62,23 @@
 	font-size: 0.9rem;
 	margin-bottom: 8px;
 }
+
+.toggle__theme__btn {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	padding: 0.3rem 0.6rem;
+	border: none;
+	border-radius: 3px;
+	font-size: 1.2rem;
+}
+
+.btn-dark {
+	background-color: #1f1b24 !important;
+	color: aliceblue !important;
+}
+
+.App-dark {
+	background-color: #1f1b24;
+	color: aliceblue;
+}
