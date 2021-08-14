@@ -18,12 +18,21 @@
 	background-color: #defded;
 }
 
+.card-container {
+	position: relative;
+}
+
 .card {
 	width: 340px;
 	height: 360px;
 	padding: 10px;
 	margin: 10px;
 	background-color: #fff;
+	transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .card-img-container > img {
@@ -52,4 +61,9 @@
 .card-title,
 .card-description {
 	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: black;
 }

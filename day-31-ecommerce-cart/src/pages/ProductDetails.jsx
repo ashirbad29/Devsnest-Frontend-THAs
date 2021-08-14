@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProdcutDetails } from '../redux/slices/productSlice';
-import { addItem } from '../redux/slices/cartSlice';
+import { addItem, toggleVisibility } from '../redux/slices/cartSlice';
 import { useParams } from 'react-router-dom';
 
 import '../styles/productDetails.css';
@@ -11,7 +11,7 @@ const ProductDetails = () => {
 	const dispatch = useDispatch();
 	const { currentProduct } = useSelector(state => state.products);
 	const { cartItems } = useSelector(state => state.cart);
-	const [itemQuantity, setItemQuantity] = useState(0);
+	const [itemQuantity, setItemQuantity] = useState(1);
 
 	useEffect(() => {
 		dispatch(getProdcutDetails(parems.id));
@@ -51,23 +51,26 @@ const ProductDetails = () => {
 					<button
 						style={{ cursor: 'pointer' }}
 						className='controls'
-						onClick={() => setItemQuantity(s => s - 1)}
+						onClick={() => setItemQuantity(s => (s === 1 ? s : s - 1))}
 					>
 						-
 					</button>
 				</div>
 				<button
 					className='add-cart-btn'
-					onClick={() =>
+					onClick={() => {
 						dispatch(
 							addItem({
 								title: currentProduct.title,
 								id: currentProduct.id,
 								image: currentProduct.image,
 								quantity: itemQuantity,
+								price: currentProduct.price,
 							})
-						)
-					}
+						);
+
+						dispatch(toggleVisibility());
+					}}
 				>
 					Add to Cart
 				</button>
