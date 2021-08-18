@@ -1,45 +1,33 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import './App.scss';
+import UserInput from './UserInput';
+
+import { reducerType } from './reducers';
+import { removeNote } from './actions';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+	const notes = useSelector((state: reducerType) => state.notes);
+	const dispatch = useDispatch();
+	return (
+		<div className='App'>
+			<UserInput />
+			<div className='notes-container'>
+				{notes.length === 0 ? (
+					<h3>Add Some Notes 🙄</h3>
+				) : (
+					<div>
+						{notes.map((val: string, idx: number) => (
+							<div className='note-item'>
+								<span>{val}</span>
+								<span onClick={() => dispatch(removeNote(idx))}>X</span>
+							</div>
+						))}
+					</div>
+				)}
+			</div>
+		</div>
+	);
 }
 
-export default App
+export default App;
